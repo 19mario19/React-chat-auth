@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/React-chat-auth/static/css/main.20c488a2.css",
+    "main.js": "/React-chat-auth/static/js/main.f7082532.js",
+    "index.html": "/React-chat-auth/index.html",
+    "main.20c488a2.css.map": "/React-chat-auth/static/css/main.20c488a2.css.map",
+    "main.f7082532.js.map": "/React-chat-auth/static/js/main.f7082532.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.20c488a2.css",
+    "static/js/main.f7082532.js"
+  ]
+}
