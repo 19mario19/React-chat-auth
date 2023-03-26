@@ -13,6 +13,8 @@ export default function PostForm() {
 
     const { user } = useAuthContext()
 
+    const uri = "https://nodejs-chat.onrender.com"
+
     async function handleSubmit(e) {
         e.preventDefault()
 
@@ -26,7 +28,7 @@ export default function PostForm() {
         }
 
 
-        const response = await fetch("/api/chat", requestOptions)
+        const response = await fetch(uri + "/api/chat", requestOptions)
         const json = await response.json()
 
 

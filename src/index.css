@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
 body {
   background-color: gainsboro;
@@ -21,6 +23,7 @@ p {
   gap: 1rem;
   background-color: gainsboro;
   font-family: "Playfair Display", serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 1.2rem;
 
 
@@ -49,6 +52,8 @@ textarea:focus,
 input:focus {
   outline: none;
 }
+
+
 
 
 .home {
@@ -116,12 +121,14 @@ button {
 
   /* flex: 1 0 20%; */
 
-  border-radius: 10px;
+  border-radius: 1px 20px 20px 20px;
 
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  
 }
 .post-details .email {
   color: rgb(195, 168, 168);
+  color: #324B4C;
   font-size: .9rem;
 }
 
@@ -133,6 +140,8 @@ button {
 .active {
   background-color: rgba(230, 224, 233, 0.995);
   align-self: flex-end;
+  background-color: #BFE4D7;
+  border-radius: 20px 20px 1px 20px ;
 }
 
 .post-details p {
@@ -141,6 +150,34 @@ button {
 
 .post-details span {
   font-size: 1rem;
+}
+
+
+.element {
+  animation: fadein .85s forwards;
+  opacity: 0;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+    z-index: -1;
+  }
+
+  40% {
+    transform: translateY(0px) ;
+  }
+
+  60%{
+    transform: translateY(5px) ;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+    z-index: 99;
+  }
 }
 
 .material-symbols-outlined {
@@ -155,6 +192,18 @@ button {
   align-items: baseline;
   /* gap: 1rem; */
 }
+
+.container-navbar h1 {
+  font-size: 3rem;
+  font-family: 'Dancing Script', cursive;
+  color: #238689;
+}
+
+.container-navbar button, .login button {
+  background-color: #238689 ;
+  color: white;
+}
+
 .container-navbar *{
   margin-left: 1rem;
 }

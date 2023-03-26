@@ -1,6 +1,7 @@
+
 {
-  "homepage": "http://19mario19.github.io/React-chat-auth",
-  "proxy": "https://nodejs-chat.onrender.com",
+  "homepage": "https://19mario19.github.io/React-chat-auth",
+  "proxy": "React-chat-auth",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,

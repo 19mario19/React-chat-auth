@@ -6,6 +6,8 @@ export default function useLogin() {
   const [isLoading, setIsLoading] = useState(null)
   const { dispatch } = useAuthContext()
 
+  const uri = "https://nodejs-chat.onrender.com"
+
   async function login(email, password) {
     setIsLoading(true)
     setError(null)
@@ -16,7 +18,7 @@ export default function useLogin() {
       body: JSON.stringify({ email, password }),
     }
 
-    const response = await fetch("/api/user/login", requestOptions)
+    const response = await fetch(uri + "/api/user/login", requestOptions)
     const json = await response.json()
 
     if (!response.ok) {
@@ -34,5 +36,5 @@ export default function useLogin() {
     }
   }
 
-  return { login, isLoading, error}
+  return { login, isLoading, error }
 }

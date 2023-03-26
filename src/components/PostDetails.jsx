@@ -39,9 +39,9 @@ export default function PostDetails({ post }) {
     }
 
     return (
-        <div className={`post-details ${active}`}>
+        <div className={`post-details element ${active}`}>
             <div className="left">
-                <p className="email">{post.user_id}</p>
+                <p className="email">{active? "Me" : post.user_id}</p>
                 <p className="message">{post.message}</p>
                 <span>{
                     formatDistanceToNow(new Date(post.createdAt),
@@ -50,7 +50,7 @@ export default function PostDetails({ post }) {
 
             </div>
             <div className="right">
-                <span className="material-symbols-outlined" onClick={handleClick}>x</span>
+                {active && <span className="material-symbols-outlined" onClick={handleClick}>delete</span>}
             </div>
 
 

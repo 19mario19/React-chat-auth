@@ -9,6 +9,8 @@ export default function Home() {
     const { user } = useAuthContext()
     const divRef = useRef(null);
 
+    const uri = "https://nodejs-chat.onrender.com"
+
 
     useEffect(() => {
         async function fetchPosts() {
@@ -19,7 +21,7 @@ export default function Home() {
                 }
             }
 
-            const res = await fetch("/api/chat", headers)
+            const res = await fetch(uri + "/api/chat", headers)
             const json = await res.json()
 
 
@@ -34,7 +36,7 @@ export default function Home() {
     }, [dispatch, user])
 
     useEffect(() => {
-        divRef.current.scrollIntoView({ behavior: 'smooth' });
+        divRef.current.scrollIntoView();
     });
 
 
