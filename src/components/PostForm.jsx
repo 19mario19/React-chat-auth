@@ -1,6 +1,7 @@
 import { useState } from "react"
 import useAuthContext from "../hooks/useAuthConext"
 import usePostsContext from "../hooks/usePostsContext"
+import BASE_URL from "../global/baseUrl"
 
 
 export default function PostForm() {
@@ -12,8 +13,6 @@ export default function PostForm() {
     const { dispatch } = usePostsContext()
 
     const { user } = useAuthContext()
-
-    const uri = "https://nodejs-chat.onrender.com"
 
     async function handleSubmit(e) {
         e.preventDefault()
@@ -28,7 +27,7 @@ export default function PostForm() {
         }
 
 
-        const response = await fetch(uri + "/api/chat", requestOptions)
+        const response = await fetch(BASE_URL + "/api/chat", requestOptions)
         const json = await response.json()
 
 

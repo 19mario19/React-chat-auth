@@ -1,6 +1,7 @@
 import { formatDistanceToNow } from "date-fns"
 import useAuthContext from "../hooks/useAuthConext"
 import usePostsContext from "../hooks/usePostsContext"
+import BASE_URL from "../global/baseUrl"
 
 export default function PostDetails({ post }) {
 
@@ -30,7 +31,7 @@ export default function PostDetails({ post }) {
             }
         }
 
-        const res = await fetch(`/api/chat/${post._id}`, reqOptions)
+        const res = await fetch(`${BASE_URL}${post._id}`, reqOptions)
         const json = await res.json()
 
         if (res.ok) {

@@ -102,9 +102,11 @@ button {
 .posts {
   display: flex;
   flex-direction: column-reverse;
+  
   flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 2rem;
+  width: 100%;
 }
 
 .post-details {
@@ -124,6 +126,8 @@ button {
   border-radius: 1px 20px 20px 20px;
 
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+  font-size: clamp(1rem, 1.2vw, 2rem);
   
 }
 .post-details .email {
@@ -135,6 +139,7 @@ button {
 .post-details .message {
   margin-top: 1rem;
   margin-bottom: .3rem;
+  
 }
 
 .active {
@@ -228,3 +233,5 @@ button {
   border-radius: 10px;
   font-size: 15px;
 }
+
+

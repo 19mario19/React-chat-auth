@@ -3,13 +3,12 @@ import PostDetails from "../components/PostDetails";
 import PostForm from "../components/PostForm";
 import useAuthContext from "../hooks/useAuthConext";
 import usePostsContext from "../hooks/usePostsContext";
+import BASE_URL from "../global/baseUrl";
 
 export default function Home() {
     const { posts, dispatch } = usePostsContext()
     const { user } = useAuthContext()
     const divRef = useRef(null);
-
-    const uri = "https://nodejs-chat.onrender.com"
 
 
     useEffect(() => {
@@ -21,7 +20,7 @@ export default function Home() {
                 }
             }
 
-            const res = await fetch(uri + "/api/chat", headers)
+            const res = await fetch(BASE_URL + "/api/chat", headers)
             const json = await res.json()
 
 
